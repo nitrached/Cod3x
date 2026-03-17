@@ -36,7 +36,7 @@ The binary will be available at `./target/release/transf-orm-cli`
 cp ./target/release/transf-orm-cli /usr/local/bin/
 ```
 
-## 📖 Usage
+## Usage
 
 ### Basic Command
 
