@@ -11,19 +11,11 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "pull-request-title-pattern": "chore${scope}: release${component} ${version}",
+      "version-file": "version.txt",
+      "pull-request-title-pattern": "chore: release ${version}",
       "extra-files": [
-        {
-          "type": "json",
-          "file": "package.json",
-          "jsonpath": "$.version"
-        },
-        {
-          "type": "toml",
-          "file": "Cargo.toml",
-          "search": "version = \"(?<version>.*?)\"",
-          "replaceGroup": "version"
-        }
+        {"type": "json", "file": "package.json", "jsonpath": "$.version"},
+        {"type": "toml", "file": "Cargo.toml", "search": "version = \"(?<version>.*?)\"", "replaceGroup": "version"}
       ]
     }
   }
