@@ -11,6 +11,7 @@
   "packages": {
     ".": {
       "release-type": "node",
+      "component": "",
       "extra-files": [
         {
           "type": "toml",
