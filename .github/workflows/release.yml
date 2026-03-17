@@ -36,6 +36,7 @@ jobs:
     if: needs.release-please.outputs.releases_created == 'true'
     permissions:
       id-token: write
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
