@@ -1,0 +1,24 @@
+{
+  "branches": [
+    {
+      "branch": "main",
+      "prerelease": false
+    }
+  ],
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "package-name": "transf-orm-cli",
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "extra-files": [
+        {
+          "type": "toml",
+          "file": "Cargo.toml",
+          "search": "version = \"(?<version>.*?)\"",
+          "replaceGroup": "version"
+        }
+      ]
+    }
+  }
+}
