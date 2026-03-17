@@ -1,0 +1,35 @@
+name: Close Issue on Merge
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - dev
+
+jobs:
+  close-issue:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close related issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+
+            // Regex pour trouver "Closes #123" ou "Fixes #123"
+            const issueRegex = /(?:Closes|Fixes|Resolves)\s+#(\d+)/gi;
+            let match;
+
+            while ((match = issueRegex.exec(body)) !== null) {
+              const issueNumber = match[1];
+              console.log(`Closing issue #${issueNumber}`);
+
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                state: 'closed'
+              });
+            }
