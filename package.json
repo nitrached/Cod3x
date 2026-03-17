@@ -1,19 +1,26 @@
 {
-  "name": "@transform/cli",
-  "version": "0.1.0",
-  "description": "Transform ORM CLI",
+  "name": "@transf-orm/cli",
+  "version": "1.0.0",
+  "description": "the cli version to transf-orm",
+  "main": "bin/transform.js",
   "bin": {
-    "transform": "bin/transform.js"
+    "cli": "bin/transform.js"
   },
-  "files": [
-    "bin",
-    "README.md",
-    "LICENSE"
-  ],
   "scripts": {
-    "build": "cargo build --release"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Transf-ORM/Transf-ORM-CLI.git"
+  },
+  "keywords": [
+    "transf-orm",
+    "ORM"
+  ],
+  "author": "Timeotr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Transf-ORM/Transf-ORM-CLI/issues"
+  },
+  "homepage": "https://github.com/Transf-ORM/Transf-ORM-CLI#readme"
 }
