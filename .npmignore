@@ -1,0 +1,7 @@
+# Include only publishable runtime artifacts
+*
+!package.json
+!README.md
+!LICENSE
+!bin/transf-orm
+!target/release/transf-orm-cli

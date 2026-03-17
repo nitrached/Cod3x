@@ -2,11 +2,18 @@
   "name": "@transf-orm/cli",
   "version": "1.0.0",
   "description": "the cli version to transf-orm",
-  "main": "bin/transform.js",
+  "main": "bin/transf-orm",
   "bin": {
-    "cli": "bin/transform.js"
+    "transf-orm": "bin/transf-orm"
   },
+  "files": [
+    "bin/transf-orm",
+    "target/release/transf-orm-cli",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
+    "build": "cargo build --release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
