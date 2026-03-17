@@ -1,24 +1,31 @@
 {
-  "branches": [
+  "release-type": "node",
+  "package-name": "transf-orm-cli",
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+  "changelog-sections": [
     {
-      "branch": "main",
-      "prerelease": false
+      "type": "feat",
+      "section": "Features",
+      "hidden": false
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes",
+      "hidden": false
+    },
+    {
+      "type": "chore",
+      "section": "Miscellaneous",
+      "hidden": true
     }
   ],
-  "packages": {
-    ".": {
-      "release-type": "node",
-      "package-name": "transf-orm-cli",
-      "bump-minor-pre-major": true,
-      "bump-patch-for-minor-pre-major": true,
-      "extra-files": [
-        {
-          "type": "toml",
-          "file": "Cargo.toml",
-          "search": "version = \"(?<version>.*?)\"",
-          "replaceGroup": "version"
-        }
-      ]
+  "extra-files": [
+    {
+      "type": "toml",
+      "file": "Cargo.toml",
+      "search": "version = \"(?<version>.*?)\"",
+      "replaceGroup": "version"
     }
-  }
+  ]
 }
