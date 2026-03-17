@@ -5,7 +5,7 @@ A powerful command-line tool for transforming and managing ORM schemas with ease
 [![Security](https://github.com/Transf-ORM/Transf-ORM-CLI/actions/workflows/security.yml/badge.svg)](https://github.com/Transf-ORM/Transf-ORM-CLI/actions/workflows/security.yml)
 [![Build](https://github.com/Transf-ORM/Transf-ORM-CLI/actions/workflows/build.yml/badge.svg)](https://github.com/Transf-ORM/Transf-ORM-CLI/actions/workflows/build.yml)
 
-## 🚀 Features
+## Features
 
 - **Easy Schema Transformation** - Convert and transform ORM schemas seamlessly
 - **Multi-Database Support** - Works with various database systems
@@ -13,12 +13,12 @@ A powerful command-line tool for transforming and managing ORM schemas with ease
 - **CLI-First** - Intuitive command-line interface for automation
 - **Extensible** - Plugin architecture for custom transformations
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Rust 1.70.0 or later
 - Cargo
 
-## 🔧 Installation
+## Installation
 
 ### From Source
 
@@ -57,7 +57,7 @@ transf-orm-cli transform --input schema.orm --output schema.sql
 transf-orm-cli validate --file schema.orm
 ```
 
-## 🎯 Configuration
+## Configuration
 
 Create a `transf-orm.config.toml` file in your project root:
 
@@ -72,7 +72,7 @@ pretty_print = true
 validate_after_transform = true
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -85,7 +85,7 @@ validate_after_transform = true
     └── ISSUE_TEMPLATE/
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -108,7 +108,7 @@ Contributions are welcome! Please follow these steps:
 - Use the [feature request template](.github/ISSUE_TEMPLATE/feature_request.md) for feature suggestions
 - Be as descriptive as possible
 
-## 🧪 Testing
+## Testing
 
 Run tests with:
 
@@ -122,7 +122,7 @@ Run tests with verbose output:
 cargo test -- --nocapture
 ```
 
-## 🔒 Security
+## Security
 
 We take security seriously. Please see our [security policy](SECURITY.md) for reporting vulnerabilities.
 
@@ -132,16 +132,16 @@ Run security audits with:
 cargo audit
 ```
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙋 Support
+## Support
 
-- 📚 Check the [documentation](docs/) for detailed guides
-- 💬 Open an issue for questions or issues
-- 🐛 Report bugs using the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md)
+- Check the [documentation](docs/) for detailed guides
+- Open an issue for questions or issues
+- Report bugs using the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Thanks to all contributors and the open-source community for making this project possible.
