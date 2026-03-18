@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/Transf-ORM/Transf-ORM-CLI/compare/cli-v0.3.2...cli-v0.3.3) (2026-03-18)
+
+
+### Bug Fixes
+
+* add environment variables for npm publish step ([03a74ca](https://github.com/Transf-ORM/Transf-ORM-CLI/commit/03a74cac296623b1f41f976e2269ca57fcbd0a2a))
+
 ## [0.3.2](https://github.com/Transf-ORM/Transf-ORM-CLI/compare/cli-v0.3.1...cli-v0.3.2) (2026-03-18)
 
 
