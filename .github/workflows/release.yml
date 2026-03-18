@@ -34,7 +34,6 @@ jobs:
     needs: release-please
     if: needs.release-please.outputs.releases_created == 'true'
     permissions:
-      id-token: write
       contents: read
     steps:
       - name: Checkout code
@@ -44,6 +43,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm install
@@ -54,19 +54,7 @@ jobs:
       - name: Build release binary
         run: npm run build
 
-      - name: Debug OIDC token
-        run: |
-          curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-          "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=npm" | jq .
-
-      - name: Debug npmrc
-        run: cat /home/runner/work/_temp/.npmrc || echo "no npmrc"
-
-      - name: Debug local npmrc
-        run: cat .npmrc || echo "no local npmrc"
-
       - name: Publish to npm
-        run: npm publish --provenance --access public
+        run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ""
-          NPM_TOKEN: ""
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
