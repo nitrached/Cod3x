@@ -62,5 +62,8 @@ jobs:
       - name: Debug npmrc
         run: cat /home/runner/work/_temp/.npmrc || echo "no npmrc"
 
+      - name: Debug local npmrc
+        run: cat .npmrc || echo "no local npmrc"
+
       - name: Publish to npm
         run: npm publish --provenance --access public
