@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Transf-ORM/Transf-ORM-CLI/compare/cli-v0.2.0...cli-v0.2.1) (2026-03-18)
+
+
+### Bug Fixes
+
+* update npm publish command and add publishConfig to package.json ([76652eb](https://github.com/Transf-ORM/Transf-ORM-CLI/commit/76652ebf042f64484491ed0d3cc3219d30247352))
+
 ## [0.2.0](https://github.com/Transf-ORM/Transf-ORM-CLI/compare/cli-v0.1.4...cli-v0.2.0) (2026-03-17)
 
 
